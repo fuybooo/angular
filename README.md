@@ -1,28 +1,31 @@
 # Auction
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+## 学习开发angular项目
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1.初始化angular项目
+  1.安装开发环境
+    1.nodejs, webstorm, git
+  2.搭建项目骨架
+    1.安装angular命令行工具 npm install -g @angular/cli
+    2.查看命令版本 ng -v
+    3.使用命令生成项目骨架 ng new auction
+    4.进入项目并启动项目 cd auction && npm start
+    5.使用git将项目提交到自己的github
+      1.在github创建一个项目名叫auction,设置ssh key略过
+      2.生成公钥： ssh-keygen -t rsa -C 'fuybooo@qq.com'
+      3.在github上设置SSH公钥
+      4.git init
+      5.git remote add origin git@github.com:fuybooo/auction.git
+      6.git add -A
+      7.git commit -m '搭建angular项目骨架'
+      8.git push -u origin master
+  3.安装第三方库
+    1.npm install jquery --save
+    2.npm install bootstrap --save
+  4.安装类型文件
+    1.npm install @types/jquery --save-dev
+    2.npm install @types/bootstrap --save-dev
+  5.生成组件骨架
+    1.ng g component xxx
+      
+  
