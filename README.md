@@ -27,5 +27,8 @@
     2.npm install @types/bootstrap --save-dev
   5.生成组件骨架
     1.ng g component xxx
+  6.开发页面模板
+    1.如果遇到webstorm无法提示css样式的问题,可以做如下操作
+      1.文件-设置-directories-add content root 将需要提示的文件所在的父级文件夹加进来即可.
       
   
