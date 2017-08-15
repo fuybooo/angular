@@ -2,6 +2,7 @@
 
 ## 学习开发angular项目
 
+2017-08-14
 1.初始化angular项目
   1.安装开发环境
     1.nodejs, webstorm, git
@@ -30,5 +31,8 @@
   6.开发页面模板
     1.如果遇到webstorm无法提示css样式的问题,可以做如下操作
       1.文件-设置-directories-add content root 将需要提示的文件所在的父级文件夹加进来即可.
-      
+2017-08-15
+1.引入base.css --> 在angular-cli.json中配置即可
+2.属性绑定[src] = "url"
+3.输入属性
   
