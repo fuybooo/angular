@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StartsComponent } from './starts/starts.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StartsComponent } from './starts/starts.component';
     SearchComponent,
     CarouselComponent,
     ProductComponent,
-    StartsComponent
+    StartsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule
