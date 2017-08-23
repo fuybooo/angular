@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from "@angular/forms";
+import 'rxjs/Rx'; // 让debounceTime起作用
 
 @Component({
   selector: 'app-product',
@@ -8,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   public products: Array<Product>;
-  constructor() { }
+  public keywords: string;
+  // 响应式编程，input输入框的值改变的时候会发送valueChange事件
+  public filterField: FormControl = new FormControl();
+
+  constructor() {
+    // 订阅filterField字段的valueChange事件
+    this.filterField.valueChanges.debounceTime(500).subscribe(value => this.keywords = value);
+  }
 
   ngOnInit() {
 
