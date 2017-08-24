@@ -1,4 +1,31 @@
-<img src="http://iph.href.lu/320x150?text=产品详情" alt="">
-<p>
-  {{productTitle}}
-</p>
+<div class="thumbnail">
+  <img src="http://iph.href.lu/800x320?text=产品详情" alt="">
+  <div>
+    <h4 class="pull-right">{{product.price}}元</h4>
+    <h4>{{product.title}}</h4>
+    <p>{{product.desc}}</p>
+  </div>
+  <div>
+    <p class="pull-right">{{comments.length}}</p>
+    <p><app-starts [rating]="product.rating"></app-starts></p>
+  </div>
+</div>
+<div class="well">
+  <div>
+    <app-starts [readonly]="false" [(rating)]="newRating"></app-starts>
+  </div>
+  <div>
+    <textarea [(ngModel)]="newComment"></textarea>
+    <button class="btn btn-primary" (click)="addComment()">提交</button>
+  </div>
+  <div class="row" *ngFor="let comment of comments">
+    <hr>
+    <div class="col-md-12">
+      <app-starts [rating]="comment.rating"></app-starts>
+      <span>{{comment.user}}</span>
+      <span class="pull-right">{{comment.timestamp}}</span>
+      <p></p>
+      <p>{{comment.content}}</p>
+    </div>
+  </div>
+</div>

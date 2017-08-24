@@ -15,10 +15,13 @@ import {RouterModule, Routes} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import { FilterPipe } from './pipe/filter.pipe';
+import {ProductService} from "./shared/product.service";
+import {ErrorComponent} from "./error/error.component";
 
 const routeConfig: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'product/:productTitle', component: ProductDetailComponent}
+  {path: 'product/:id', component: ProductDetailComponent},
+  {path: '**', component: ErrorComponent}
 ];
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ const routeConfig: Routes = [
     TestComponent,
     ProductDetailComponent,
     HomeComponent,
-    FilterPipe
+    FilterPipe,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,7 @@ const routeConfig: Routes = [
     RouterModule.forRoot(routeConfig),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
