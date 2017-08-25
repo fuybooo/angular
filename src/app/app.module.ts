@@ -40,10 +40,8 @@ const routeConfig: Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, // 提供双向数据绑定指令
     HttpModule,
-    // main module use forRoot
-    // child module use forChild
     RouterModule.forRoot(routeConfig),
     ReactiveFormsModule
   ],
