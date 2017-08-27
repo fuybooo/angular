@@ -1,13 +1,13 @@
-<div class="row">
-  <div class="col-md-12">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="请输入关键字..."
-      [formControl]="filterField">
-    </div>
-  </div>
-</div>
+<!--<div class="row">-->
+  <!--<div class="col-md-12">-->
+    <!--<div class="form-group">-->
+      <!--<input type="text" class="form-control" placeholder="请输入关键字..."-->
+      <!--[formControl]="filterField">-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 <!--使用管道过滤-->
-<div *ngFor="let product of products | filter: 'title': keywords; index as i" class="col-md-4 col-lg-4 col-sm-4">
+<div *ngFor="let product of products | async; index as i" class="col-md-4 col-lg-4 col-sm-4">
   <div class="thumbnail">
     <img src="http://iph.href.lu/320x150?text=产品{{i + 1}}" alt="">
     <div class="caption">
